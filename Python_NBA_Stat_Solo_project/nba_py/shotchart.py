@@ -2,6 +2,8 @@ from nba_py import _api_scrape, _get_json
 from nba_py import constants
 
 
+
+#Current parameter requirement = 23
 class ShotChart:
     _endpoint = 'shotchartdetail'
 
