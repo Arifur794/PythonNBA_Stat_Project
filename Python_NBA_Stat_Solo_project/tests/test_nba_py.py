@@ -1,4 +1,5 @@
 import nba_py
 
 def test():
-    assert nba_py.Scoreboard(month=2, day=21, year=2015)
+    
+    assert nba.py.Scoreboard(month=2, day=29, year=2015) # error handle invalid leap year
