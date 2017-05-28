@@ -1,7 +1,7 @@
 from datetime import datetime
 
 _curr_year = datetime.now().year
-if datetime.now().month > 6:
+if datetime.now().month > 6: #off-season handling for constants
     CURRENT_SEASON = str(_curr_year) + "-" + str(_curr_year + 1)[2:]
 else:
     CURRENT_SEASON = str(_curr_year - 1) + "-" + str(_curr_year)[2:]
@@ -423,7 +423,7 @@ class MeasureType:
 class PtMeasureType:
     SpeedDistance = 'SpeedDistance'
 
-
+#don't touch
 class GroupQuantity:
     Default = 5
 
@@ -485,6 +485,7 @@ class ClutchTime(_DefaultBlank):
     Last10Sec = 'Last 10 Seconds'
 
 
+    # Categorizing shot selection based on shotclock range
 class ShotClockRange(_DefaultBlank):
     AllRanges = ''
     # I honestly don't know anytime the shot clock would be off
@@ -551,7 +552,7 @@ class PlayoffRound(_DefaultZero):
     ConferenceFinals = '3'
     Finals = '4'
 
-
+#1-7 categorize in special class?
 class Month(_DefaultZero):
     All = '0'
     October = '1'
@@ -616,6 +617,8 @@ class StatCategory:
 class ContextMeasure:
     # Not sure if this is mapped correctly. Source:
     # https://github.com/bradleyfay/NBAStats
+    
+    #reminder to check this for confirmation
     FGM = 'FGM'
     FGA = 'FGA'
     FG_PCT = 'FG_PCT'
@@ -631,6 +634,12 @@ class ContextMeasure:
     Default = FGM
 
 
+    
+    
+    
+    
+    
+    #Any better way to correctly manage scoping here under a single class?
 class Scope:
     AllPlayers = 'S'
     Rookies = 'Rookies'
@@ -657,6 +666,7 @@ class GameScope:
     Finals = 'Finals'
     Default = Season
 
+    
 
 class Game_Scope(_DefaultBlank):
     Last10 = 'Last 10'
