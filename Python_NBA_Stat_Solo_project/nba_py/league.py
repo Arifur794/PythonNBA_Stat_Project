@@ -1,6 +1,7 @@
 from nba_py import _api_scrape, _get_json
 from nba_py import constants
 
+#Json parse ftw
 
 class Leaders:
     _endpoint = 'leagueleaders'
