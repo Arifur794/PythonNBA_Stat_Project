@@ -26,6 +26,7 @@ stable version use:
 
 ::
 
+
     $ pip install nba_py
 
 Else: - Download from source (git clone, zipped package) - Run from the
