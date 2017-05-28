@@ -86,6 +86,8 @@ class Boxscore(_BaseBoxcore):
     def team_starter_bench_stats(self):
         return _api_scrape(self.json, 2)
 
+    
+    #define sql necessary scrapes
 
 class BoxscoreScoring(_BaseBoxcore):
     _endpoint = 'boxscorescoringv2'
