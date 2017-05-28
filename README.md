@@ -1,2 +1,2 @@
 # PythonNBA_Stat_Project
-Side project to demonstrate data extraction skills along with statistical planning methods.  Wanting to illustrate proficiency handling analytics for large data set members in meaningful graphical representations. 
+Side project aimed to demonstrate my data extraction/web scraping skills along with statistical planning methods. Illustrating proficient data analytics skills for large data set members. Implementing meaningful graphical representations for multi-variably defined situations.
