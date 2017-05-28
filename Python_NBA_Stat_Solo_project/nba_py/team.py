@@ -34,6 +34,11 @@ class TeamSummary:
     def season_ranks(self):
         return _api_scrape(self.json, 1)
 
+    
+    
+    
+    
+ #TeamDetails = 8 scrapes   
 
 class TeamDetails:
     _endpoint = 'teamdetails'
@@ -41,7 +46,7 @@ class TeamDetails:
     def __init__(self, team_id):
         self.json = _get_json(endpoint=self._endpoint,
                               params={'TeamID': team_id})
-
+    
     def background(self):
         return _api_scrape(self.json, 0)
 
@@ -66,6 +71,12 @@ class TeamDetails:
     def retired(self):
         return _api_scrape(self.json, 7)
 
+    
+    
+    
+    
+    
+    #TeamCommonRoster= 2 scrapes
 
 class TeamCommonRoster:
     _endpoint = 'commonteamroster'
@@ -83,6 +94,11 @@ class TeamCommonRoster:
     def coaches(self):
         return _api_scrape(self.json, 1)
 
+    
+    
+    
+    
+    
 
 class _TeamDashboard:
     _endpoint = ''
@@ -139,6 +155,13 @@ class _TeamDashboard:
     def overall(self):
         return _api_scrape(self.json, 0)
 
+    
+    
+    
+    
+    
+    
+    
 
 class TeamGeneralSplits(_TeamDashboard):
     _endpoint = 'teamdashboardbygeneralsplits'
@@ -159,6 +182,14 @@ class TeamGeneralSplits(_TeamDashboard):
         return _api_scrape(self.json, 5)
 
 
+    
+    
+    
+    
+    
+    
+    
+    
 class TeamOpponentSplits(_TeamDashboard):
     _endpoint = 'teamdashboardbyopponent'
 
@@ -171,6 +202,16 @@ class TeamOpponentSplits(_TeamDashboard):
     def by_opponent(self):
         return _api_scrape(self.json, 2)
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 class TeamLastNGamesSplits(_TeamDashboard):
     _endpoint = 'teamdashboardbylastngames'
@@ -191,6 +232,13 @@ class TeamLastNGamesSplits(_TeamDashboard):
         return _api_scrape(self.json, 5)
 
 
+    
+    
+    
+    
+    
+    
+    
 class TeamInGameSplits(_TeamDashboard):
     _endpoint = 'teamdashboardbygamesplits'
 
@@ -206,7 +254,13 @@ class TeamInGameSplits(_TeamDashboard):
     def by_actual_margin(self):
         return _api_scrape(self.json, 4)
 
-
+    
+    
+    
+    
+    
+    
+    #TeamClutchSplits= 9 scrapes
 class TeamClutchSplits(_TeamDashboard):
     """
     This is a weird endpoint, to be honest.
@@ -274,6 +328,14 @@ class TeamClutchSplits(_TeamDashboard):
         return _api_scrape(self.json, 9)
 
 
+    
+    
+    
+    
+    
+    
+    
+    #TeamShootingSplits= 6 scrapes
 class TeamShootingSplits(_TeamDashboard):
     _endpoint = 'teamdashboardbyshootingsplits'
 
@@ -308,6 +370,10 @@ class TeamPerformanceSplits(_TeamDashboard):
     def points_against(self):
         return _api_scrape(self.json, 3)
 
+    
+    
+    
+    
 
 class TeamYearOverYearSplits(_TeamDashboard):
     _endpoint = 'teamdashboardbyyearoveryear'
@@ -315,6 +381,10 @@ class TeamYearOverYearSplits(_TeamDashboard):
     def by_year(self):
         return _api_scrape(self.json, 1)
 
+    
+    
+    
+    
 
 class TeamLineups:
     _endpoint = 'teamdashlineups'
@@ -373,12 +443,23 @@ class TeamLineups:
         return _api_scrape(self.json, 1)
 
 
+    
+    
+    
+    
+    
 class TeamPlayers(_TeamDashboard):
     _endpoint = 'teamplayerdashboard'
 
     def season_totals(self):
         return _api_scrape(self.json, 1)
 
+    
+    
+    
+    
+    
+    
 
 class TeamPlayerOnOffDetail(_TeamDashboard):
     _endpoint = 'teamplayeronoffdetails'
@@ -390,6 +471,13 @@ class TeamPlayerOnOffDetail(_TeamDashboard):
         return _api_scrape(self.json, 2)
 
 
+    
+    
+    
+    
+    
+    
+    
 class TeamPlayerOnOffSummary(_TeamDashboard):
     _endpoint = 'teamplayeronoffsummary'
 
@@ -400,6 +488,10 @@ class TeamPlayerOnOffSummary(_TeamDashboard):
         return _api_scrape(self.json, 2)
 
 
+    
+    
+    
+    
 class TeamGameLogs:
     _endpoint = 'teamgamelog'
 
@@ -415,6 +507,11 @@ class TeamGameLogs:
     def info(self):
         return _api_scrape(self.json, 0)
 
+    
+    
+    
+    
+    
 
 class TeamSeasons:
     _endpoint = 'teamyearbyyearstats'
@@ -434,6 +531,12 @@ class TeamSeasons:
         return _api_scrape(self.json, 0)
 
 
+    
+    
+    
+    
+    
+    
 class TeamShotTracking(_TeamDashboard):
     _endpoint = 'teamdashptshots'
 
@@ -453,6 +556,11 @@ class TeamShotTracking(_TeamDashboard):
         return _api_scrape(self.json, 5)
 
 
+    
+    
+    
+    
+    
 class TeamReboundTracking(_TeamDashboard):
     _endpoint = 'teamdashptreb'
 
@@ -468,6 +576,12 @@ class TeamReboundTracking(_TeamDashboard):
     def rebound_distance_rebounding(self):
         return _api_scrape(self.json, 4)
 
+    
+    
+    
+    
+    
+    
 
 class TeamPassTracking(_TeamDashboard):
     _endpoint = 'teamdashptpass'
@@ -478,7 +592,12 @@ class TeamPassTracking(_TeamDashboard):
     def passes_recieved(self):
         return _api_scrape(self.json, 1)
 
-
+    
+    
+    
+    
+    
+    #TeamVsPlayer= 9 scrapes 
 class TeamVsPlayer:
     _endpoint = 'teamvsplayer'
 
